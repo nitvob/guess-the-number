@@ -19,9 +19,9 @@ for i in range(100):
             max_val = min_val + random.randint(1, 100)
             game = Game(min_val, max_val)
 
-            self.assertTrue(min_val <= game.number <= max_val, f"Generated number {game.number} not in range [{min_val}, {max_val}]")
+            self.assertTrue(min_val <= game.answer <= max_val, f"Generated answer {game.answer} not in range [{min_val}, {max_val}]")
             for guess in range(min_val, max_val + 1):
-                if guess != game.number:
+                if guess != game.answer:
                     self.assertEqual(game.check_guess(guess), False)
                 else:
                     self.assertEqual(game.check_guess(guess), True)

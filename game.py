@@ -7,7 +7,8 @@ class Game:
         - Store the min and max values.
         - Generate a random number within this range for the player to guess.
         """
-        pass  # TODO: Implement the initialization logic
+        self.answer = random.randint(min, max)
+
 
     def check_guess(self, guess: int) -> bool:
         """
@@ -15,4 +16,7 @@ class Game:
         - Compare the guess to the target number.
         - Return True if correct, False otherwise.
         """
-        pass  # TODO: Implement the guess checking logic
+        if self.answer == guess:
+            return True
+        else:
+            return False

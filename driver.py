@@ -1,8 +1,8 @@
 from game import Game
 
 # Define the minimum and maximum values for the guessing range
-min_val = 0
-max_val = 5
+min_val = int(input("Enter a minimum: "))
+max_val = int(input("Enter a maximum: "))
 
 print("Welcome to the guessing game!")
 
